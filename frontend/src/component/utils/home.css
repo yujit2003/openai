@@ -1,0 +1,123 @@
+*{
+    margin:1vh;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.home_container{
+    height:auto;
+    width:100vw;
+    margin:0px;
+    padding:0px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.home_box{
+    height:auto;
+    width:80vw;
+    margin: 0;
+    border: 2px solid rgb(0, 0, 0);
+    display:flex;
+}
+
+.home_box_1{
+    display: flex;
+    margin:auto;
+    font-size: 1.5rem;
+    padding:2vh;
+}
+.testcase{
+    width:10vw;
+    height:5vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    font-size: large;
+}
+.title{
+    width:20vw;
+    height:5vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    font-size: large;
+}
+
+.home_box_1_testcase{
+    display:flex;
+    width:40vw;
+    padding:1vh;
+}
+h6{
+    padding:1vh;
+}
+
+.home_box_1_title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:40vw;
+    padding:1vh;
+}
+
+.home_box_1_steps{
+    width:40vw;
+    height:40vh;
+}
+.home_box_1_notes{
+    height:40vh;
+    width:40vw;
+}
+
+textarea{   
+    min-width:70%;
+    min-height:70%;
+    padding:1vh;
+    font-size:2vh;
+    border-radius: 1vh;
+}
+
+.home_box_1_result{
+    padding: 2vh;
+    font-size: 2vh;
+}
+
+.home_button{
+    height:5vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+/* CSS */
+.button-1 {
+  background-color: #4cc0ea;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #1d6ca4;
+}

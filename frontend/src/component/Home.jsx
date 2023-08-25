@@ -7,6 +7,9 @@ const Home = () => {
         <div className="home_container">
             <div className="home_box">
                 <div className="home_box_details">
+                    <div className="home_title">
+                        <h1>Prompt to Code Generator</h1>
+                    </div>
                     <div className="home_box_1">
                         <div className="home_box_1_testcase">
                             <h6>TEST CASE ID</h6>

@@ -144,9 +144,11 @@ textarea{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  transition: all 0.4s;
 }
 
 .button-1:hover,
 .button-1:focus {
+
   background-color: #c61ea4;
 }

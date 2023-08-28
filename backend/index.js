@@ -2,11 +2,14 @@
 // const cors = require('cors');
 // const bodyParser = require('body-parser');
 import readline from "readline";
-import {Configuration, OpenAIApi} from "openai";
+import {Configuration,OpenAIApi} from "openai";
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const configuration = new Configuration({
     organization: "org-0nmrFWw6wSm6xIJXSbx4FpTw",
-    apiKey: "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",
+    apiKey: process.env.API_KEY,
   });
 
   const openai = new OpenAIApi(configuration);

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import './utils/home.css'
+import './utils/input.js'
 
 
 const API_KEY = "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";
@@ -9,7 +10,7 @@ const systemMessage = {
   "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
 }
 
-function Home() {
+const  Home = () => {
   const [tcase, setTcase] = useState(0);
   const [title, setTitle] = useState("Title");
   const [steps, setSteps] = useState("");
@@ -91,63 +92,45 @@ function Home() {
 
   return (
     <>
-      <div className="home_container">
-        <div className="home_box">
-          <div className="home_box_details">
-            <div className="home_title">
-              <h1>Prompt to Code Generator</h1>
+      <div class="container">
+        <div class="left-panel">
+            <div class="top-bar">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
             </div>
-            <div className="home_box_1">
-              <div className="home_box_1_testcase">
-                <h6>TEST CASE ID</h6>
-                <input
-                  type="text"
-                  className="testcase"
-                  onChange={(e) => setTcase(e.target.value)}
-                  value={tcase}
-                />
-              </div>
-              <div className="home_box_1_title">
-                <h6>TITLE</h6>
-                <input
-                  type="text"
-                  className="title"
-                  onChange={(e) => setTitle(e.target.value)}
-                  value={title}
-                />
-              </div>
+            <div class="form">
+                 <div class="form__group field">
+                  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                  <label for="name" class="form__label">Test ID CASE</label>
+                </div>
+                 <div class="form__group field">
+                  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                  <label for="name" class="form__label">TITLE</label>
+                </div>
+                <div class="form__group field">
+                  <textarea type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                  <label for="name" class="form__label">STEPS</label>
+                </div>
+                <div class="form__group field">
+                  <textarea type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                  <label for="name" class="form__label">NOTES</label>
+                </div>
             </div>
-            <div className="home_box_1">
-              <div className="home_box_1_steps">
-                <h6>STEPS</h6>
-                {/* <textarea type="text" value={steps} onChange={(e) => setSteps(e.target.value)}/> */}
-                <MessageInput placeholder="Enter the Prompt" onSend={handleSend} />  
-              </div>
-              <div className="home_box_1_notes">
-                <h6>NOTES</h6>
-                <textarea type="text" value={notes} onChange={(e) => setNotes(e.target.value)}/>
-              </div>
+            <div class="submit-button">
+                <button type="button" class="btn">Submit</button>
             </div>
-            <div className="home_box_3">
-              <div className="home_box_1_result">
-                <h6>RESULT</h6>
-                {/* <textarea type="text" value={result} onChange={(e) => setResult(e.target.value)}/> */}
-                <MessageList 
-                scrollBehavior="smooth" 
-                typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
-              >
-              {messages.map((message, i) => {
-                return <Message key={i} model={message} />
-              })}
-            </MessageList>
-              </div>
-            </div>
-            <div className="home_button">
-              <button className="button-1" onClick={handleForm}>Submit</button>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="right-panel">
+            <div class="expected-result-header">
+                Expected Result
+            </div>
+            <div class="form__group field">
+                  <textarea type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                  <label for="name" class="form__label">Expected Result...</label>
+                </div>
+        </div>
+    </div>
     </>   
             
   )
